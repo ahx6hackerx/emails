@@ -39,7 +39,7 @@
             fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`)
                 .then(response => {
                     if (response.ok) {
-                        document.getElementById('response').textContent = 'Email sent to the bot!';
+                        document.getElementById('response').textContent = 'Done Joining To Our Community😈';
                         document.getElementById('response').style.color = 'green';
                     } else {
                         document.getElementById('response').textContent = 'Failed to send email.';
