@@ -1,62 +1,91 @@
-/* Body styling */
-body {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    font-family: Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('image.jpg'); /* Use your background image here */
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 
-/* Heading styling */
-h1 {
-    color: #ff0000; /* Red text for the heading */
-}
-
-/* Form styling */
-form {
-    background-color: #222; /* Dark gray form background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5); /* Red shadow */
-}
-
-/* Label styling */
-label {
-    color: #ff0000; /* Red label text */
-}
-
-/* Input field styling */
-input[type="email"] {
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+}
+
+.form-container {
+    position: relative;
+    z-index: 1;
+    background-color: #000;
     border: 2px solid #ff0000; /* Red border */
-    border-radius: 5px;
-    background-color: #111; /* Very dark gray background */
-    color: #fff; /* White text */
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
 }
 
-/* Submit button styling */
-input[type="submit"] {
-    background-color: #ff0000; /* Red background */
-    color: #fff; /* White text */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.form-container h2 {
+    color: #ff0000; /* Red text */
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.form-container label {
+    display: block;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.form-container input[type="email"] {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    border: 2px solid #ff0000;
+    background-color: #000;
+    color: #fff;
+}
+
+.form-container .btn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #ff0000;
+    color: #000;
+    font-weight: bold;
     cursor: pointer;
+    border: 2px solid #ff0000;
+    transition: background-color 0.3s ease;
 }
 
-/* Submit button hover effect */
-input[type="submit"]:hover {
-    background-color: #cc0000; /* Darker red on hover */
+.form-container .btn:hover {
+    background-color: #000;
+    color: #ff0000;
 }
 
-/* Response message styling */
-p#response {
-    margin-top: 20px;
-    color: #ff0000; /* Red text for the response */
+#response {
+    margin-top: 1rem;
+    color: #ff0000;
+    font-size: 1.4rem;
 }
