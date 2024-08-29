@@ -1,0 +1,62 @@
+/* Body styling */
+body {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Heading styling */
+h1 {
+    color: #ff0000; /* Red text for the heading */
+}
+
+/* Form styling */
+form {
+    background-color: #222; /* Dark gray form background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5); /* Red shadow */
+}
+
+/* Label styling */
+label {
+    color: #ff0000; /* Red label text */
+}
+
+/* Input field styling */
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ff0000; /* Red border */
+    border-radius: 5px;
+    background-color: #111; /* Very dark gray background */
+    color: #fff; /* White text */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #ff0000; /* Red background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+/* Response message styling */
+p#response {
+    margin-top: 20px;
+    color: #ff0000; /* Red text for the response */
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email to Telegram Bot</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <form id="emailForm">
+        <h1>Subscribe to our Newsletter</h1>
+        <label for="email">Enter your email:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <input type="submit" value="Submit">
+        <p id="response"></p>
+    </form>
+
+    <script>
+        // JavaScript to handle the form submission
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the email input value
+            const email = document.getElementById('email').value;
+
+            // Your Telegram bot token and chat ID
+            const botToken = 'YOUR_BOT_TOKEN';
+            const chatId = 'YOUR_CHAT_ID';
+
+            // The message you want to send
+            const message = `New email subscriber: ${email}`;
+
+            // Send the email to the Telegram bot using the Telegram API
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`)
+                .then(response => {
+                    if (response.ok) {
+                        document.getElementById('response').textContent = 'Email sent to the bot!';
+                    } else {
+                        document.getElementById('response').textContent = 'Failed to send email.';
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('response').textContent = 'Error occurred: ' + error.message;
+                });
+        });
+    </script>
+
+</body>
+</html>
